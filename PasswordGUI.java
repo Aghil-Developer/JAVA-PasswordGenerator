@@ -22,7 +22,7 @@ public class PasswordGUI extends JFrame{
 		
 		setLocationRelativeTo(null);
 		
-		getContentPane().setBackground(Color.decode("#000000")); // or any color
+		getContentPane().setBackground(Color.decode("#000000")); 
 
 		passwordgenerator = new PasswordGenerator();
 		
@@ -82,7 +82,7 @@ public class PasswordGUI extends JFrame{
 		
 		JToggleButton numbersToggle = new JToggleButton("Numbers");
 		passwordLengthInput.setFont(new Font("Dialog" , Font.PLAIN,32));
-		numbersToggle.setBackground(Color.decode("#ffd93d")); // sky blue
+		numbersToggle.setBackground(Color.decode("#ffd93d")); 
 		numbersToggle.setForeground(Color.decode("#000000"));
 		numbersToggle.setBounds(25,373,225,56);
 		add(numbersToggle);
@@ -90,20 +90,20 @@ public class PasswordGUI extends JFrame{
 		JToggleButton symbolsToggle = new JToggleButton("Symbols");
 		passwordLengthInput.setFont(new Font("Dialog" , Font.PLAIN,32));
 		symbolsToggle.setBounds(282,373,225,56);
-		symbolsToggle.setBackground(Color.decode("#ffd93d")); // sky blue
+		symbolsToggle.setBackground(Color.decode("#ffd93d"));
 		symbolsToggle.setForeground(Color.decode("#000000"));
 		add(symbolsToggle);
 		
 		JButton generateButton = new JButton("Generate");
 		generateButton.setFont(new Font("Dialog" , Font.PLAIN,32));
-		generateButton.setBackground(Color.decode("#ffd93d")); // sky blue
+		generateButton.setBackground(Color.decode("#ffd93d")); 
 		generateButton.setForeground(Color.decode("#000000"));
 		generateButton.setBounds(155,477,222,41);
 		generateButton.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				
 				if(passwordLengthInput.getText().length()<=0) return;
 				boolean anyToggleSelected = lowercaseToggle.isSelected() || uppercaseToggle.isSelected() || numbersToggle.isSelected() || symbolsToggle.isSelected();
 				int passwordLength = Integer.parseInt(passwordLengthInput.getText());
